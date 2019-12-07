@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<h3>Your tweet has been deleted</h3>
+<br>
+<div>
+    <h3 class="mr-5"><a href="{% url 'tweets:my-tweets' username=request.user.username %}">Go to My Tweets</a></h3>
+</div>
+
+
+{% endblock %}

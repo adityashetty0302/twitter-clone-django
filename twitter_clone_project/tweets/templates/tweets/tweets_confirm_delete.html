@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Are you sure you want to delete this tweet?</h3>
+
+<div>
+	{% include "tweets/_tweet.html" with tweet_obj=object hide_delete=True %}
+</div>
+
+<form method="POST">
+	{% csrf_token %}
+	<input type="submit" value="Confirm Delete" class="btn btn-danger btn-large">
+	<a href="{% url 'tweets:my-tweets' username=tweet_obj.user.username %}" class="btn btn-light btn-large">Cancel</a>
+</form>
+
+{% endblock %}

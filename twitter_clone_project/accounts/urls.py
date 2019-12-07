@@ -11,4 +11,7 @@ urlpatterns = [
     path('logout/',
          auth_views.LogoutView.as_view(), name='logout'),
     path('signup/', views.SignUp.as_view(), name='signup'),
+    path('all/', views.AllUsers.as_view(), name='all'),
+    path('ajax/change-follow-status', views.change_follow_status, name='change_follow_status'),
+    path('ajax/check-follow-status', views.check_follow_status, name='check_follow_status'),
 ]

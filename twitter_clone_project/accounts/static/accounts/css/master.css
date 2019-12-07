@@ -5,22 +5,9 @@ body {
   color:white;
 }
 
-.mycontent{
-  padding-top: 100px;
- border: 10px solid red;
-}
 
 .simple_text{
   color: white
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  background: #191063;
-  margin: 0;
 }
 
 

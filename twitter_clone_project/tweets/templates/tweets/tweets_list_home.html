@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<br>
+<div class="col-md-8">
+    <h1>Tweets by users you follow</h1>
+</div>
+
+<br/><br/>
+<div class="col-md-8">
+    {% for tweet_obj in tweets_list %}
+    {% include "tweets/_tweet.html" %}
+    {% endfor %}
+</div>
+{% endblock %}

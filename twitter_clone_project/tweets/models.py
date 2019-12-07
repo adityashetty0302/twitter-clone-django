@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
@@ -11,12 +12,11 @@ class Tweets(models.Model):
     created_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.tweets
+        return self.tweet
 
-    # def get_absolute_url(self):
-    #     return reverse("tweets:my_tweets", kwargs={"username": self.user.username,
-    #                                            "pk": self.pk})
+    def get_absolute_url(self):
+        return reverse("tweets:my-tweets", kwargs={"username": self.user.username})
 
     class Meta:
         ordering = ["-created_at"]
-        unique_together = ["user", "tweets"]
+        unique_together = ["user", "tweet"]

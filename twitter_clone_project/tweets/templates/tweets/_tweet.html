@@ -1,0 +1,19 @@
+<div class="media">
+	<h3 class="mr-5 col-md-4"><a href="{% url 'tweets:my-tweets' username=tweet_obj.user.username %}">@{{ tweet_obj.user.username }}</a></h3>
+
+	<div class="media-body col-md-8">
+		<h5>{{ tweet_obj.tweet}}</h5>
+			<time class="time">{{ tweet_obj.created_at }}</time>
+		</h5>
+
+		<div class="media-footer">
+			{% if user.is_authenticated and tweet_obj.user == user and not hide_delete %}
+				<a href="{% url 'tweets:delete' pk=tweet_obj.pk %}" title="delete" class="btn btn-simple">
+					<span class="fa fa-remove text-danger" aria-hidden="true"></span>
+					<span class="text-danger icon-label">Delete</span>
+				</a>
+			{% endif %}
+		</div>
+	</div>
+</div>
+<br>
