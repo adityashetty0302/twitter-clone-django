@@ -1,2 +1,2 @@
-# twitter-clone-django-drf
-Twitter Clone made using Django &amp; Django Rest Framework
+# twitter-clone-django
+Twitter Clone made using Django
