@@ -1,7 +1,9 @@
-beautifulsoup4==4.8.1
-Django==2.0
+-i https://pypi.org/simple/
+beautifulsoup4==4.9.1
 django-bootstrap4==1.0.1
 django-extensions==2.2.5
-pytz==2019.3
-six==1.13.0
-soupsieve==1.9.5
+django==2.2.13
+pytz==2020.1
+six==1.15.0
+soupsieve==2.0.1
+sqlparse==0.3.1
